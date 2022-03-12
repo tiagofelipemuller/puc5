@@ -1,14 +1,13 @@
 package pucpr.br.exemplo.veiculo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import pucpr.br.exemplo.veiculo.entity.Veiculo;
 import pucpr.br.exemplo.veiculo.service.VeiculoService;
 
 import java.util.List;
 
+@RestController
 @RequestMapping("/veiculo")
 public class VeiculoController {
     @Autowired
@@ -24,7 +23,7 @@ public class VeiculoController {
        return veiculoService.listar();
     }
 
-    @GetMapping
+    @DeleteMapping
     public void excluir(Veiculo veiculo){
 
     }

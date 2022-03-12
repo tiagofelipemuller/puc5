@@ -1,11 +1,13 @@
 package pucpr.br.exemplo.veiculo.service;
 
+import org.springframework.stereotype.Service;
 import pucpr.br.exemplo.veiculo.entity.Veiculo;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
+@Service
 public class VeiculoService {
     Logger logger = Logger.getLogger(VeiculoService.class.getName());
 
@@ -21,7 +23,7 @@ public class VeiculoService {
         v.setPlaca("BBF7831");
         v.setModelo("Golf GTI");
         veiculos.add(v);
-        return null;
+        return veiculos;
     }
      public void deletar(Veiculo veiculo){
 
